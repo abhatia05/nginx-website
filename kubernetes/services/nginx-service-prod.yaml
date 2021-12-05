@@ -3,8 +3,8 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
-    app: 'nginx-website-production-${parameters.release}'
-  name: nginx-website-production
+    app: nginx
+  name: 'nginx-website-production-${parameters.release}'
 spec:
   ports:
   - name: 80-80
