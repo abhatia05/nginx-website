@@ -1,34 +1,30 @@
 kind: Deployment
 apiVersion: apps/v1
 metadata:
-  name: sample-backend-production
+  name: nginx-website-production
   labels:
-    app: sample
+    app: nginx
 spec:
   replicas: 4
   selector:
     matchLabels:
-      app: sample
+      app: nginx
   template:
     metadata:
       name: backend
       labels:
-        app: sample
+        app: nginx
         role: backend
         env: production
     spec:
       containers:
       - name: backend
-        image: gcr.io/PROJECT/sample-app
+        image: gcr.io/PROJECT/nginx-website
         resources:
           limits:
             memory: "500Mi"
             cpu: "100m"
         imagePullPolicy: Always
-        readinessProbe:
-          httpGet:
-            path: /health
-            port: 8080
         env:
         - name: COMPONENT
           value: backend
@@ -36,4 +32,4 @@ spec:
           value: production
         ports:
         - name: backend
-          containerPort: 8080
+          containerPort: 80
