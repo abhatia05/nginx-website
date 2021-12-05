@@ -11,7 +11,7 @@ spec:
     protocol: TCP
     targetPort: 80
   selector:
-    app: sample
+    app: nginx
     role: backend
     env: canary
   sessionAffinity: None
