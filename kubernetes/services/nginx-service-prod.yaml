@@ -3,7 +3,7 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
-    app: nginx-website-production
+    app: 'nginx-website-production-${parameters.release}'
   name: nginx-website-production
 spec:
   ports:
@@ -14,5 +14,6 @@ spec:
   selector:
     app: nginx
     role: backend
+    release: '${parameters.release}'
   sessionAffinity: None
   type: LoadBalancer

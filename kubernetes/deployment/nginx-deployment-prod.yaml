@@ -1,9 +1,10 @@
 kind: Deployment
 apiVersion: apps/v1
 metadata:
-  name: nginx-website-production
+  name: 'nginx-website-production-${parameters.release}'
   labels:
     app: nginx
+    release: '${parameters.release}'
 spec:
   replicas: 3
   selector:
@@ -16,6 +17,7 @@ spec:
         app: nginx
         role: backend
         env: production
+        release: '${parameters.release}'
     spec:
       containers:
       - name: backend
