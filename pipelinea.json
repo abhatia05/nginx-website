@@ -2,6 +2,7 @@
     "appConfig": {},
     "name": "demo",
     "application": "nginx",
+    "id": "3793b8dd-474b-4b83-ab29-7b1f77072b66",
     "expectedArtifacts": [
         {
             "defaultArtifact": {
@@ -18,7 +19,8 @@
                 "type": "gcs/object"
             },
             "useDefaultArtifact": true,
-            "usePriorArtifact": true
+            "usePriorArtifact": true,
+            "usePriorExecution": false
         },
         {
             "defaultArtifact": {
