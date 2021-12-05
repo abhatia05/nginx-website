@@ -5,7 +5,7 @@ metadata:
   labels:
     app: nginx
     release: '${parameters.release}'
-  name: 'nginx-website-production-${parameters.release}'
+  name: nginx-website-production
 spec:
   ports:
   - name: 80-80
