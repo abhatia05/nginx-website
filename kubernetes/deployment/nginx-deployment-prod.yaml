@@ -1,7 +1,7 @@
 kind: Deployment
 apiVersion: apps/v1
 metadata:
-  name: nginx-website-production
+  name: 'nginx-website-production-${parameters.release}'
   labels:
     app: nginx
     release: '${parameters.release}'
@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
       - name: backend
-        image: 'gcr.io/spinnaker-334105/nginx-website:${parameters.release}'
+        image: gcr.io/spinnaker-334105/nginx-website
         resources:
           limits:
             memory: "500Mi"
