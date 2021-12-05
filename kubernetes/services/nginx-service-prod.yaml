@@ -4,6 +4,7 @@ kind: Service
 metadata:
   labels:
     app: nginx
+    release: '${parameters.release}'
   name: 'nginx-website-production-${parameters.release}'
 spec:
   ports:
