@@ -13,7 +13,7 @@ spec:
     metadata:
       name: backend
       labels:
-        app: ngnix
+        app: nginx
         role: backend
         env: canary
     spec:
