@@ -15,4 +15,4 @@ spec:
     app: nginx
     role: backend
   sessionAffinity: None
-  type: ClusterIP
+  type: LoadBalancer
