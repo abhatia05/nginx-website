@@ -1,386 +1,362 @@
 {
-    "name": "Deploy",
-    "application": "sample",
-    "id": "2650c7c9-dd0a-4f59-ab0d-9c96a34cd1bc",
-    "appConfig": {},
-    "keepWaitingPipelines": true,
-    "lastModifiedBy": "anonymous",
-    "limitConcurrent": true,
-    "parallel": true,
-    "expectedArtifacts": [
-        {
-            "defaultArtifact": {
-                "kind": "default.gcs",
-                "name": "gs://qwiklabs-gcp-01-e47696aa470b-kubernetes-manifests/deployments/sample-frontend-production.yaml",
-                "reference": "gs://qwiklabs-gcp-01-e47696aa470b-kubernetes-manifests/deployments/sample-frontend-production.yaml",
-                "type": "gcs/object"
+    "id": "42c6f6cc-dceb-4cd7-99c8-e2ddaa481d6e",
+    "metadata": {
+        "description": "A pipeline template derived from pipeline \"demo-pipeline\" in application \"nginx-website\"",
+        "name": "nervous-rattlesnake-45",
+        "owner": "inspiremeashish@gmail.com",
+        "scopes": [
+            "global"
+        ]
+    },
+    "pipeline": {
+        "appConfig": {},
+        "expectedArtifacts": [
+            {
+                "defaultArtifact": {
+                    "artifactAccount": "gcs-spinnaker-334105",
+                    "id": "01d7a51b-90ad-4491-bc0d-18cba98b6fb6",
+                    "kind": "default.gcs",
+                    "name": "gs://nginx-website-ashish/deployment/nginx-deployment-canary.yaml",
+                    "reference": "gs://nginx-website-ashish/deployment/nginx-deployment-canary.yaml",
+                    "type": "gcs/object"
+                },
+                "displayName": "gs://nginx-website-ashish/deployment/nginx-deployment-canary.yaml",
+                "id": "7a9fb17e-3d93-44e6-af23-a4e1e23fdb76",
+                "matchArtifact": {
+                    "artifactAccount": "gcs-spinnaker-334105",
+                    "id": "797f828f-3842-4c34-b140-ce21d6a5b6da",
+                    "kind": "gcs",
+                    "name": "gs://nginx-website-ashish/deployment/nginx-deployment-canary.yaml",
+                    "type": "gcs/object"
+                },
+                "useDefaultArtifact": true,
+                "usePriorArtifact": true
             },
-            "id": "f07830d8-80ac-4d21-a879-35c1f3592698",
-            "matchArtifact": {
-                "kind": "gcs",
-                "name": "gs://qwiklabs-gcp-01-e47696aa470b-kubernetes-manifests/deployments/sample-frontend-production.yaml",
-                "type": "gcs/object"
+            {
+                "defaultArtifact": {
+                    "artifactAccount": "gcs-spinnaker-334105",
+                    "id": "f4662720-7af6-4b68-bc85-0d96da1a4dff",
+                    "kind": "default.gcs",
+                    "name": "gs://nginx-website-ashish/services/nginx-service-canary.yaml",
+                    "reference": "gs://nginx-website-ashish/services/nginx-service-canary.yaml",
+                    "type": "gcs/object"
+                },
+                "displayName": "gs://nginx-website-ashish/services/nginx-service-canary.yaml",
+                "id": "cc1ee8d7-e94c-45d1-be2c-3edb9a9da7c4",
+                "matchArtifact": {
+                    "artifactAccount": "gcs-spinnaker-334105",
+                    "id": "8211ce85-dd26-4c9c-a0c5-16b16b420e15",
+                    "kind": "gcs",
+                    "name": "gs://nginx-website-ashish/services/nginx-service-canary.yaml",
+                    "type": "gcs/object"
+                },
+                "useDefaultArtifact": true,
+                "usePriorArtifact": true
             },
-            "useDefaultArtifact": true,
-            "usePriorArtifact": true,
-            "usePriorExecution": false
-        },
-        {
-            "defaultArtifact": {
-                "kind": "default.gcs",
-                "name": "gs://qwiklabs-gcp-01-e47696aa470b-kubernetes-manifests/deployments/sample-backend-production.yaml",
-                "reference": "gs://qwiklabs-gcp-01-e47696aa470b-kubernetes-manifests/deployments/sample-backend-production.yaml",
-                "type": "gcs/object"
+            {
+                "defaultArtifact": {
+                    "artifactAccount": "docker-registry",
+                    "id": "e60a06cd-580a-48f1-a6f9-f13667ea2abf",
+                    "name": "gcr.io/spinnaker-334105/nginx-website",
+                    "reference": "gcr.io/spinnaker-334105/nginx-website:v5",
+                    "type": "docker/image",
+                    "version": "v5"
+                },
+                "displayName": "gcr.io/spinnaker-334105/nginx-website",
+                "id": "ef6e0159-8b3c-4253-bddd-ac9453efaad2",
+                "matchArtifact": {
+                    "artifactAccount": "docker-registry",
+                    "id": "51e78746-8801-4b9d-8400-9e898ae6edd9",
+                    "name": "gcr.io/spinnaker-334105/nginx-website",
+                    "type": "docker/image"
+                },
+                "useDefaultArtifact": true,
+                "usePriorArtifact": true
             },
-            "id": "2d48e090-5610-4691-86e5-88c70123367a",
-            "matchArtifact": {
-                "kind": "gcs",
-                "name": "gs://qwiklabs-gcp-01-e47696aa470b-kubernetes-manifests/deployments/sample-backend-production.yaml",
-                "type": "gcs/object"
+            {
+                "defaultArtifact": {
+                    "artifactAccount": "gcs-spinnaker-334105",
+                    "id": "9c8db9e6-4bbf-4b75-9afd-53ddbf684a03",
+                    "kind": "default.gcs",
+                    "name": "gs://nginx-website-ashish/services/nginx-service-prod.yaml",
+                    "reference": "gs://nginx-website-ashish/services/nginx-service-prod.yaml",
+                    "type": "gcs/object"
+                },
+                "displayName": "gs://nginx-website-ashish/services/nginx-service-prod.yaml",
+                "id": "881ba4cc-c1ab-4fd3-ab5e-d3399064b8ab",
+                "matchArtifact": {
+                    "artifactAccount": "gcs-spinnaker-334105",
+                    "id": "b6a6dc0d-31ff-4915-a212-cd9059cf8d74",
+                    "kind": "gcs",
+                    "name": "gs://nginx-website-ashish/services/nginx-service-prod.yaml",
+                    "type": "gcs/object"
+                },
+                "useDefaultArtifact": true,
+                "usePriorArtifact": true
             },
-            "useDefaultArtifact": true,
-            "usePriorArtifact": true,
-            "usePriorExecution": false
-        },
-        {
-            "defaultArtifact": {
-                "kind": "default.gcs",
-                "name": "gs://qwiklabs-gcp-01-e47696aa470b-kubernetes-manifests/services/sample-backend-prod.yaml",
-                "reference": "gs://qwiklabs-gcp-01-e47696aa470b-kubernetes-manifests/services/sample-backend-prod.yaml",
-                "type": "gcs/object"
+            {
+                "defaultArtifact": {
+                    "artifactAccount": "gcs-spinnaker-334105",
+                    "id": "8a4a656f-6e86-4f36-a77c-d0cba121fbc9",
+                    "kind": "default.gcs",
+                    "name": "gs://nginx-website-ashish/deployment/nginx-deployment-prod.yaml",
+                    "reference": "gs://nginx-website-ashish/deployment/nginx-deployment-prod.yaml",
+                    "type": "gcs/object"
+                },
+                "displayName": "gs://nginx-website-ashish/deployment/nginx-deployment-prod.yaml",
+                "id": "5e8f4870-c096-4a65-b1fd-9a77defe96d2",
+                "matchArtifact": {
+                    "artifactAccount": "gcs-spinnaker-334105",
+                    "id": "fc903354-7bc5-4f90-8441-74e93a3065f7",
+                    "kind": "gcs",
+                    "name": "gs://nginx-website-ashish/deployment/nginx-deployment-prod.yaml",
+                    "type": "gcs/object"
+                },
+                "useDefaultArtifact": true,
+                "usePriorArtifact": true
+            }
+        ],
+        "keepWaitingPipelines": false,
+        "lastModifiedBy": "anonymous",
+        "limitConcurrent": true,
+        "parameterConfig": [
+            {
+                "default": "v20",
+                "description": "",
+                "hasOptions": false,
+                "label": "",
+                "name": "release",
+                "options": [
+                    {
+                        "value": ""
+                    }
+                ],
+                "pinned": false,
+                "required": true
+            }
+        ],
+        "spelEvaluator": "v4",
+        "stages": [
+            {
+                "account": "default",
+                "cloudProvider": "kubernetes",
+                "manifestArtifactAccount": "gcs-spinnaker-334105",
+                "manifestArtifactId": "7a9fb17e-3d93-44e6-af23-a4e1e23fdb76",
+                "moniker": {
+                    "app": "nginx-website"
+                },
+                "name": "Deploy Canary",
+                "refId": "1",
+                "requiredArtifactIds": [
+                    "ef6e0159-8b3c-4253-bddd-ac9453efaad2"
+                ],
+                "requiredArtifacts": [],
+                "requisiteStageRefIds": [],
+                "skipExpressionEvaluation": false,
+                "source": "artifact",
+                "trafficManagement": {
+                    "enabled": false,
+                    "options": {
+                        "enableTraffic": false,
+                        "services": []
+                    }
+                },
+                "type": "deployManifest"
             },
-            "id": "eafe5bee-19ca-4c81-95f6-f3d5c8695a25",
-            "matchArtifact": {
-                "kind": "gcs",
-                "name": "gs://qwiklabs-gcp-01-e47696aa470b-kubernetes-manifests/services/sample-backend-prod.yaml",
-                "type": "gcs/object"
+            {
+                "failPipeline": true,
+                "instructions": "Approve the manual judgement",
+                "judgmentInputs": [],
+                "name": "Manual Judgment",
+                "notifications": [],
+                "refId": "2",
+                "requisiteStageRefIds": [
+                    "1",
+                    "10"
+                ],
+                "type": "manualJudgment"
             },
-            "useDefaultArtifact": true,
-            "usePriorArtifact": true,
-            "usePriorExecution": false
-        },
-        {
-            "defaultArtifact": {
-                "kind": "default.gcs",
-                "name": "gs://qwiklabs-gcp-01-e47696aa470b-kubernetes-manifests/services/sample-frontend-prod.yaml",
-                "reference": "gs://qwiklabs-gcp-01-e47696aa470b-kubernetes-manifests/services/sample-frontend-prod.yaml",
-                "type": "gcs/object"
+            {
+                "name": "Wait 30 min",
+                "refId": "3",
+                "requisiteStageRefIds": [
+                    "1",
+                    "10"
+                ],
+                "type": "wait",
+                "waitTime": 1800
             },
-            "id": "e169983d-9d3f-42fc-a739-f4f91e9bdc1c",
-            "matchArtifact": {
-                "kind": "gcs",
-                "name": "gs://qwiklabs-gcp-01-e47696aa470b-kubernetes-manifests/services/sample-frontend-prod.yaml",
-                "type": "gcs/object"
+            {
+                "account": "default",
+                "cloudProvider": "kubernetes",
+                "manifestArtifactAccount": "gcs-spinnaker-334105",
+                "manifestArtifactId": "5e8f4870-c096-4a65-b1fd-9a77defe96d2",
+                "moniker": {
+                    "app": "nginx-website"
+                },
+                "name": "Deploy prod (blue green)",
+                "refId": "4",
+                "requiredArtifactIds": [
+                    "ef6e0159-8b3c-4253-bddd-ac9453efaad2"
+                ],
+                "requiredArtifacts": [],
+                "requisiteStageRefIds": [
+                    "3",
+                    "2"
+                ],
+                "skipExpressionEvaluation": false,
+                "source": "artifact",
+                "trafficManagement": {
+                    "enabled": false,
+                    "options": {
+                        "enableTraffic": false,
+                        "services": []
+                    }
+                },
+                "type": "deployManifest"
             },
-            "useDefaultArtifact": true,
-            "usePriorArtifact": true,
-            "usePriorExecution": false
-        },
-        {
-            "defaultArtifact": {
-                "kind": "default.docker",
-                "name": "gcr.io/qwiklabs-gcp-01-e47696aa470b/sample-app",
-                "reference": "gcr.io/qwiklabs-gcp-01-e47696aa470b/sample-app:v1.0.0",
-                "type": "docker/image",
-                "version": "v1.0.0"
+            {
+                "account": "default",
+                "app": "nginx-website",
+                "cloudProvider": "kubernetes",
+                "kinds": [
+                    "deployment",
+                    "service"
+                ],
+                "labelSelectors": {
+                    "selectors": [
+                        {
+                            "key": "env",
+                            "kind": "EQUALS",
+                            "values": [
+                                "canary"
+                            ]
+                        }
+                    ]
+                },
+                "location": "default",
+                "mode": "label",
+                "name": "Tear Down Canary",
+                "options": {
+                    "cascading": true
+                },
+                "refId": "6",
+                "requisiteStageRefIds": [
+                    "4"
+                ],
+                "type": "deleteManifest"
             },
-            "id": "80c8982d-f5df-4d31-b828-5d537d8f67aa",
-            "matchArtifact": {
-                "kind": "docker",
-                "name": "gcr.io/qwiklabs-gcp-01-e47696aa470b/sample-app",
-                "type": "docker/image"
+            {
+                "name": "Wait 2 hour",
+                "refId": "7",
+                "requisiteStageRefIds": [
+                    "4"
+                ],
+                "type": "wait",
+                "waitTime": 7200
             },
-            "useDefaultArtifact": true,
-            "usePriorArtifact": true,
-            "usePriorExecution": false
-        },
-        {
-            "defaultArtifact": {
-                "id": "1821af7d-d1ed-43c0-b8d1-fca97ed761d0",
-                "kind": "default.gcs",
-                "name": "gs://qwiklabs-gcp-01-e47696aa470b-kubernetes-manifests/services/sample-frontend-canary.yaml",
-                "reference": "gs://qwiklabs-gcp-01-e47696aa470b-kubernetes-manifests/services/sample-frontend-canary.yaml",
-                "type": "gcs/object"
+            {
+                "account": "default",
+                "app": "nginx-website",
+                "cloudProvider": "kubernetes",
+                "kinds": [
+                    "deployment"
+                ],
+                "labelSelectors": {
+                    "selectors": [
+                        {
+                            "key": "State",
+                            "kind": "EQUALS",
+                            "values": [
+                                "old"
+                            ]
+                        }
+                    ]
+                },
+                "location": "default",
+                "mode": "label",
+                "name": "destroy older prod deployment",
+                "options": {
+                    "cascading": true
+                },
+                "refId": "9",
+                "requisiteStageRefIds": [
+                    "13"
+                ],
+                "type": "deleteManifest"
             },
-            "id": "3252c062-dcf0-48cf-a948-569d101f0622",
-            "matchArtifact": {
-                "id": "7da3f869-69b7-480a-9623-cac2e6c7552c",
-                "kind": "gcs",
-                "name": "gs://qwiklabs-gcp-01-e47696aa470b-kubernetes-manifests/services/sample-frontend-canary.yaml",
-                "type": "gcs/object"
+            {
+                "account": "default",
+                "cloudProvider": "kubernetes",
+                "manifestArtifactAccount": "gcs-spinnaker-334105",
+                "manifestArtifactId": "cc1ee8d7-e94c-45d1-be2c-3edb9a9da7c4",
+                "moniker": {
+                    "app": "nginx-website"
+                },
+                "name": "Deploy Canary Service",
+                "refId": "10",
+                "requiredArtifactIds": [],
+                "requiredArtifacts": [],
+                "requisiteStageRefIds": [],
+                "skipExpressionEvaluation": false,
+                "source": "artifact",
+                "trafficManagement": {
+                    "enabled": false,
+                    "options": {
+                        "enableTraffic": false,
+                        "services": []
+                    }
+                },
+                "type": "deployManifest"
             },
-            "useDefaultArtifact": true,
-            "usePriorArtifact": true
-        },
-        {
-            "defaultArtifact": {
-                "id": "65f4dacd-0a98-4406-9357-6e016319193e",
-                "kind": "default.gcs",
-                "name": "gs://qwiklabs-gcp-01-e47696aa470b-kubernetes-manifests/services/sample-backend-canary.yaml",
-                "reference": "gs://qwiklabs-gcp-01-e47696aa470b-kubernetes-manifests/services/sample-backend-canary.yaml",
-                "type": "gcs/object"
-            },
-            "id": "db69c110-d95c-4004-b1e0-3e0d926f6e0b",
-            "matchArtifact": {
-                "id": "137eadda-b3f0-43c5-a767-c1cff812507c",
-                "kind": "gcs",
-                "name": "gs://qwiklabs-gcp-01-e47696aa470b-kubernetes-manifests/services/sample-backend-canary.yaml",
-                "type": "gcs/object"
-            },
-            "useDefaultArtifact": true,
-            "usePriorArtifact": true
-        },
-        {
-            "defaultArtifact": {
-                "id": "0ff48afe-8957-4114-a310-3a3c193329a5",
-                "kind": "default.gcs",
-                "name": "gs://qwiklabs-gcp-01-e47696aa470b-kubernetes-manifests/deployments/sample-backend-canary.yaml",
-                "reference": "gs://qwiklabs-gcp-01-e47696aa470b-kubernetes-manifests/deployments/sample-backend-canary.yaml",
-                "type": "gcs/object"
-            },
-            "id": "c9ef0329-2c0a-424c-b74f-3c894ddc4c34",
-            "matchArtifact": {
-                "id": "2da697c4-839a-4e85-ae0d-ab62efef8235",
-                "kind": "gcs",
-                "name": "gs://qwiklabs-gcp-01-e47696aa470b-kubernetes-manifests/deployments/sample-backend-canary.yaml",
-                "type": "gcs/object"
-            },
-            "useDefaultArtifact": true,
-            "usePriorArtifact": true
-        },
-        {
-            "defaultArtifact": {
-                "id": "f34787e7-fd0c-417e-94fd-3b841e0d4448",
-                "kind": "default.gcs",
-                "name": "gs://qwiklabs-gcp-01-e47696aa470b-kubernetes-manifests/deployments/sample-frontend-canary.yaml",
-                "reference": "gs://qwiklabs-gcp-01-e47696aa470b-kubernetes-manifests/deployments/sample-frontend-canary.yaml",
-                "type": "gcs/object"
-            },
-            "id": "a436ab58-954a-4f3d-99f0-c80f54e09a00",
-            "matchArtifact": {
-                "id": "37fb12bf-22c7-482f-b606-a176ddaecd85",
-                "kind": "gcs",
-                "name": "gs://qwiklabs-gcp-01-e47696aa470b-kubernetes-manifests/deployments/sample-frontend-canary.yaml",
-                "type": "gcs/object"
-            },
-            "useDefaultArtifact": true,
-            "usePriorArtifact": true
-        }
-    ],
-    "keepWaitingPipelines": false,
-    "lastModifiedBy": "anonymous",
-    "limitConcurrent": true,
-    "stages": [
-        {
-            "account": "default",
-            "cloudProvider": "kubernetes",
-            "completeOtherBranchesThenFail": false,
-            "continuePipeline": false,
-            "failPipeline": true,
-            "manifestArtifactAccount": "gcs-qwiklabs-gcp-01-e47696aa470b",
-            "manifestArtifactId": "2d48e090-5610-4691-86e5-88c70123367a",
-            "moniker": {
-                "app": "sample"
-            },
-            "name": "Deploy Production Backend",
-            "refId": "1",
-            "relationships": {
-                "loadBalancers": [],
-                "securityGroups": []
-            },
-            "requiredArtifactIds": [
-                "80c8982d-f5df-4d31-b828-5d537d8f67aa"
-            ],
-            "requisiteStageRefIds": [
-                "6"
-            ],
-            "source": "artifact",
-            "type": "deployManifest"
-        },
-        {
-            "account": "default",
-            "cloudProvider": "kubernetes",
-            "completeOtherBranchesThenFail": false,
-            "continuePipeline": false,
-            "failPipeline": true,
-            "manifestArtifactAccount": "gcs-qwiklabs-gcp-01-e47696aa470b",
-            "manifestArtifactId": "f07830d8-80ac-4d21-a879-35c1f3592698",
-            "moniker": {
-                "app": "sample"
-            },
-            "name": "Deploy Production Frontend",
-            "refId": "2",
-            "relationships": {
-                "loadBalancers": [],
-                "securityGroups": []
-            },
-            "requiredArtifactIds": [
-                "80c8982d-f5df-4d31-b828-5d537d8f67aa"
-            ],
-            "requisiteStageRefIds": [
-                "6"
-            ],
-            "source": "artifact",
-            "type": "deployManifest"
-        },
-        {
-            "account": "default",
-            "cloudProvider": "kubernetes",
-            "manifestArtifactAccount": "gcs-qwiklabs-gcp-01-e47696aa470b",
-            "manifestArtifactId": "eafe5bee-19ca-4c81-95f6-f3d5c8695a25",
-            "moniker": {
-                "app": "sample"
-            },
-            "name": "Deploy Backend Production Service",
-            "refId": "3",
-            "relationships": {
-                "loadBalancers": [],
-                "securityGroups": []
-            },
-            "requisiteStageRefIds": [
-                "6"
-            ],
-            "source": "artifact",
-            "type": "deployManifest"
-        },
-        {
-            "account": "default",
-            "cloudProvider": "kubernetes",
-            "manifestArtifactAccount": "gcs-qwiklabs-gcp-01-e47696aa470b",
-            "manifestArtifactId": "e169983d-9d3f-42fc-a739-f4f91e9bdc1c",
-            "moniker": {
-                "app": "sample"
-            },
-            "name": "Deploy Frontend Production Service",
-            "refId": "4",
-            "relationships": {
-                "loadBalancers": [],
-                "securityGroups": []
-            },
-            "requisiteStageRefIds": [
-                "6"
-            ],
-            "source": "artifact",
-            "type": "deployManifest"
-        },
-        {
-            "account": "default",
-            "cloudProvider": "kubernetes",
-            "completeOtherBranchesThenFail": false,
-            "continuePipeline": false,
-            "failPipeline": true,
-            "manifestArtifactAccount": "gcs-qwiklabs-gcp-01-e47696aa470b",
-            "manifestArtifactId": "c9ef0329-2c0a-424c-b74f-3c894ddc4c34",
-            "moniker": {
-                "app": "sample"
-            },
-            "name": "Deploy Canary Backend",
-            "refId": "5",
-            "relationships": {
-                "loadBalancers": [],
-                "securityGroups": []
-            },
-            "requiredArtifactIds": [
-                "80c8982d-f5df-4d31-b828-5d537d8f67aa"
-            ],
-            "requisiteStageRefIds": [],
-            "source": "artifact",
-            "type": "deployManifest"
-        },
-        {
-            "failPipeline": true,
-            "judgmentInputs": [],
-            "name": "Deploy to Production?",
-            "notifications": [],
-            "refId": "6",
-            "requisiteStageRefIds": [
-                "5",
-                "7",
-                "8",
-                "9"
-            ],
-            "type": "manualJudgment"
-        },
-        {
-            "account": "default",
-            "cloudProvider": "kubernetes",
-            "completeOtherBranchesThenFail": false,
-            "continuePipeline": false,
-            "failPipeline": true,
-            "manifestArtifactAccount": "gcs-qwiklabs-gcp-01-e47696aa470b",
-            "manifestArtifactId": "a436ab58-954a-4f3d-99f0-c80f54e09a00",
-            "moniker": {
-                "app": "sample"
-            },
-            "name": "Deploy Canary  Frontend",
-            "refId": "7",
-            "relationships": {
-                "loadBalancers": [],
-                "securityGroups": []
-            },
-            "requiredArtifactIds": [
-                "80c8982d-f5df-4d31-b828-5d537d8f67aa"
-            ],
-            "requisiteStageRefIds": [],
-            "source": "artifact",
-            "type": "deployManifest"
-        },
-        {
-            "account": "default",
-            "cloudProvider": "kubernetes",
-            "manifestArtifactAccount": "gcs-qwiklabs-gcp-01-e47696aa470b",
-            "manifestArtifactId": "db69c110-d95c-4004-b1e0-3e0d926f6e0b",
-            "moniker": {
-                "app": "sample"
-            },
-            "name": "Deploy Backend Canary Service",
-            "refId": "8",
-            "relationships": {
-                "loadBalancers": [],
-                "securityGroups": []
-            },
-            "requisiteStageRefIds": [],
-            "source": "artifact",
-            "type": "deployManifest"
-        },
-        {
-            "account": "default",
-            "cloudProvider": "kubernetes",
-            "manifestArtifactAccount": "gcs-qwiklabs-gcp-01-e47696aa470b",
-            "manifestArtifactId": "3252c062-dcf0-48cf-a948-569d101f0622",
-            "moniker": {
-                "app": "sample"
-            },
-            "name": "Deploy Frontend Canary Service",
-            "refId": "9",
-            "relationships": {
-                "loadBalancers": [],
-                "securityGroups": []
-            },
-            "requisiteStageRefIds": [],
-            "source": "artifact",
-            "type": "deployManifest"
-        }
-    ],
-    "triggers": [
-        {
-            "account": "gcr",
-            "attributeConstraints": {},
-            "enabled": true,
-            "expectedArtifactIds": [
-                "80c8982d-f5df-4d31-b828-5d537d8f67aa"
-            ],
-            "organization": "qwiklabs-gcp-01-e47696aa470b",
-            "payloadConstraints": {
-                "tag": "gcr.io/qwiklabs-gcp-01-e47696aa470b/sample-app:v.*"
-            },
-            "pubsubSystem": "google",
-            "registry": "gcr.io",
-            "repository": "qwiklabs-gcp-01-e47696aa470b/sample-app",
-            "subscriptionName": "gcr-triggers",
-            "tag": "v.*",
-            "type": "pubsub"
-        }
-    ],
-    "updateTs": "1541650310471"
+            {
+                "account": "default",
+                "cloudProvider": "kubernetes",
+                "manifestArtifactAccount": "gcs-spinnaker-334105",
+                "manifestArtifactId": "881ba4cc-c1ab-4fd3-ab5e-d3399064b8ab",
+                "moniker": {
+                    "app": "nginx-website"
+                },
+                "name": "Promote New Version",
+                "refId": "13",
+                "requisiteStageRefIds": [
+                    "7",
+                    "6"
+                ],
+                "skipExpressionEvaluation": false,
+                "source": "artifact",
+                "trafficManagement": {
+                    "enabled": false,
+                    "options": {
+                        "enableTraffic": false,
+                        "services": []
+                    }
+                },
+                "type": "deployManifest"
+            }
+        ],
+        "triggers": [
+            {
+                "account": "gcr",
+                "attributeConstraints": {},
+                "enabled": true,
+                "expectedArtifactIds": [
+                    "ef6e0159-8b3c-4253-bddd-ac9453efaad2"
+                ],
+                "payloadConstraints": {
+                    "tag": "gcr.io/spinnaker-334105/nginx-website:v.*"
+                },
+                "pubsubSystem": "google",
+                "registry": "gcr.io",
+                "repository": "spinnaker-334105/nginx-website",
+                "subscriptionName": "gcr-triggers",
+                "tag": "v.*",
+                "type": "pubsub"
+            }
+        ],
+        "updateTs": "1638702752327"
+    },
+    "protect": false,
+    "schema": "v2",
+    "variables": []
 }
