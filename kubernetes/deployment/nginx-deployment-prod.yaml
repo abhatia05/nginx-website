@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
       - name: backend
-        image: gcr.io/spinnaker-334105/nginx-website
+        image: 'gcr.io/spinnaker-334105/nginx-website:${parameters.release}'
         resources:
           limits:
             memory: "500Mi"
